@@ -19,7 +19,7 @@ const { route } = require("./profile");
 //@access   Public
 router.get("/test", (req, res) => res.send({ msg: "Users works!" }));
 
-//@route    api/users/register
+//@route    POST api/users/register
 //@desc     Register user
 //@access   Public
 router.post("/register", (req, res) => {
