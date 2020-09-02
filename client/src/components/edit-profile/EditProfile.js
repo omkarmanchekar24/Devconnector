@@ -66,6 +66,9 @@ class EditProfile extends Component {
       profile.facebook = !isEmpty(profile.social.facebook)
         ? profile.social.facebook
         : "";
+      profile.linkedin = !isEmpty(profile.social.linkedin)
+        ? profile.social.linkedin
+        : "";
       profile.youtube = !isEmpty(profile.social.youtube)
         ? profile.social.youtube
         : "";
@@ -87,6 +90,7 @@ class EditProfile extends Component {
         linkedin: profile.linkedin,
         facebook: profile.facebook,
         youtube: profile.youtube,
+        instagram: profile.instagram,
       });
     }
   }
@@ -244,8 +248,8 @@ class EditProfile extends Component {
                 />
                 <TextFieldGroup
                   placeholder="Github Username"
-                  name="github"
-                  value={this.state.github}
+                  name="githubusername"
+                  value={this.state.githubusername}
                   onChange={this.onChange}
                   error={errors.github}
                   info="If you want your latest repos and a Github link, include your username"

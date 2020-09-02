@@ -44,7 +44,7 @@ router.get("/all", (req, res) => {
   const errors = {};
 
   Profile.find()
-    .populate("user", ["name", "email"])
+    .populate("user", ["name", "email", "avatar"])
     .then((profiles) => {
       if (!profiles) {
         errors.noprofile = "There are no profiles";
@@ -66,7 +66,7 @@ router.get("/handle/:handle", (req, res) => {
   const errors = {};
 
   Profile.findOne({ handle: req.params.handle })
-    .populate("user", ["name", "email"])
+    .populate("user", ["name", "email", "avatar"])
     .then((profile) => {
       if (!profile) {
         errors.noprofile = "There is no profile for this user";
