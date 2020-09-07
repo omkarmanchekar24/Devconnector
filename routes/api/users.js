@@ -42,7 +42,6 @@ router.post("/register", (req, res) => {
         r: "pg", // Rating
         d: "mm", // Default
       });
-      console.log(avatar);
 
       const newUser = new User({
         name: req.body.name,
